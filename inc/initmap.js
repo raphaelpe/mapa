@@ -29,7 +29,7 @@ var mrgActiveLayer = mrgLayerMapnik; //Layer atual inicial
 var mrgSideBySideControlFg = mrgLayerMapnik; //Layer inicial
 var mrgSideBySideControlBk = mrgLayerMapBoxSat; //Layer inicial
 var mrgSideBySideActive = false;
-var mrgURLBaseMapasGEOJSON = 'https://raw.githubusercontent.com/brenno-calado/mapa/master/';
+var mrgURLBaseMapasGEOJSON = 'http://localhost:5500/';
 var mrgBaseDir = GetCurrentDir();
 
 //Marcador que aparece ao clicar no mapa

@@ -29,7 +29,8 @@ if (mrgMarkerLatLonByURL !=null){
 
 //INFO: mrgAddDataOverlay(Pasta,Arquivo,Apelido,IconDefault,IconMini,Enquadrar,Heat,Cluster)
 mrgAddDataOverlay('global', 'perimetro-pe', 'Pernambuco', null, 'vector-square', !(ForceSilentAddOverlay), HeatOFF, ClusterOFF, OvCountOFF, OvExibirOn);
-mrgAddDataOverlay('global','perimetro-recife','Recife',null,'vector-square',!(ForceSilentAddOverlay),HeatOFF,ClusterOFF,OvCountOFF,OvExibirOn); 
+mrgAddDataOverlay('global', 'perimetro-recife', 'Recife', null, 'vector-square', !(ForceSilentAddOverlay), HeatOFF, ClusterOFF, OvCountOFF, OvExibirOn);
+mrgAddDataOverlay('global','bairros-recife','Bairros Recife',null,'vector-square',!(ForceSilentAddOverlay),HeatOFF,ClusterOFF,OvCountOFF,OvExibirOn);
 
 //mrgAddDataOverlay('comercio','comercio','POIs',null,'vector-square',!(ForceSilentAddOverlay),HeatOFF,true,OvCountOFF,OvExibirOn); 
 //mrgAddDataOverlay('global','vias','Ruas','road','road',false,HeatOFF,ClusterON,OvCountOFF); 
