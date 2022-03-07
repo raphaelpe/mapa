@@ -9,7 +9,10 @@ var mrgIconesOverlayIndex = [];  //Serve de índice para localizar ícones por n
 var mrgOverlaysArray = [];		 //Todas as camadas overlay serão guardadas aqui
 
 var mrgAtribuicao = L.control.attribution({prefix: mrgTxtAtribuicao});
-var map = L.map('mapdiv',{attributionControl: false}); //Cria o mapa
+var map = L.map('mapdiv', { attributionControl: false }); //Cria o mapa
+var gps = null
+map.locate({ setView: false }).on('locationfound', (e) => gps = `${e.latitude}%2C${e.longitude}`);
+
 mrgAtribuicao.addTo(map); 
 map.options.maxZoom = 19; 
 map.setView(mrgLatLonInicial, 12);
@@ -36,7 +39,7 @@ var mrgBaseDir = GetCurrentDir();
 var mrgUserTempMarker = L.marker([],{
                          'draggable' :true
 						});
-												
+
 //Inicia marcador temporário - Mostra coordenadas quando clicar em alguma parte do mapa
 function TempMarkerMsg(Lat,Lon,Zoom){
   var Opcoes = GerarOpcoesDoMapa(Lat,Lon,Zoom,mrgBaseDir);
@@ -46,8 +49,9 @@ function TempMarkerMsg(Lat,Lon,Zoom){
 	  + Opcoes;	
    return Msg; 
 }
+
 mrgUserTempMarker.on('click', function(e) {
-   var Zoom = map.getZoom();
+	var Zoom = map.getZoom();
 	var Lat = e.latlng.lat;
 	var Lon = e.latlng.lng;
 
@@ -55,8 +59,8 @@ mrgUserTempMarker.on('click', function(e) {
 	Lon = Lon.toString().substring(0, 9);
 
 	var Msg = TempMarkerMsg(Lat,Lon,Zoom);
-	mrgUserTempMarker.bindPopup(Msg); 
-});						
+	mrgUserTempMarker.bindPopup(Msg);
+});
 
 //Prepara evento ao clicar no mapa
 map.on('click', function(e) {
