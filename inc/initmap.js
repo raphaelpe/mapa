@@ -3,7 +3,7 @@ var mrgMapOnClickAddLock = false;  //Ao clicar surge um marcador. Bloqueia para 
 var mrgMapHasCluster = false;  //Controla se está usando o crontrole de cluster
 var mrgURLBoletimCOVID = 'https://wp.me/p8DR6g-166';
 
-var mrgLatLonInicial = [-8.565,-38.304]; 
+var mrgLatLonInicial = [-8.0446,-34.9245]; 
 var mrgIconesOverlay = [];       //Um lugar para guardar os icones que serão usados nas camadas overlay
 var mrgIconesOverlayIndex = [];  //Serve de índice para localizar ícones por nome no array anterior
 var mrgOverlaysArray = [];		 //Todas as camadas overlay serão guardadas aqui
@@ -12,7 +12,7 @@ var mrgAtribuicao = L.control.attribution({prefix: mrgTxtAtribuicao});
 var map = L.map('mapdiv',{attributionControl: false}); //Cria o mapa
 mrgAtribuicao.addTo(map); 
 map.options.maxZoom = 19; 
-map.setView(mrgLatLonInicial, 7);
+map.setView(mrgLatLonInicial, 12);
 
 var hash = new L.Hash(map);	//inicializa o plugin de URL aqui
 
@@ -113,7 +113,6 @@ mrgHeatMap.addTo(map);
 	info.update = function (props) {
 		this._div.innerHTML = '<h4>Mapa de Pernambuco</h4>' 
 		+   CriarBotao(HrefFromURLPlus("sobre/",     "fas fa-info-circle mrg-button-md","Saiba mais"," <span class='mrg-fg-white'>Sobre</span>",''))
-		+   CriarBotao(HrefFromURLPlus("gps/",     "fas fa-download mrg-button-md","Baixe o aplicativo"," <span class='mrg-fg-white'>Baixe o aplicativo</span>",''))
 	};
 
 	info.addTo(map);
