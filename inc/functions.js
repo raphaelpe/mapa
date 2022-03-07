@@ -46,7 +46,7 @@ function mrgMedicaoEstaAtiva(){
 
 //------------------------------------
 function GetLinkGraphhopper(Lat,Lon) {
-	var Link = "https://graphhopper.com/maps/?point=recife&point=" + Lat + "%2C" + Lon + "&locale=pt-BR&vehicle=car&weighting=fastest&elevation=true&use_miles=false&layer=OpenStreetMap";
+	var Link = `https://graphhopper.com/maps/?point=${gps ? gps : 'recife'}&point=${Lat}%2C${Lon}&locale=pt-BR&vehicle=car&weighting=fastest&elevation=true&use_miles=false&layer=OpenStreetMap`;
 	return Link;
 }
 function GetLinkMapillary(Lat,Lon,Zoom) {
