@@ -46,7 +46,7 @@ function mrgMedicaoEstaAtiva(){
 
 //------------------------------------
 function GetLinkGraphhopper(Lat,Lon) {
-	var Link = "https://graphhopper.com/maps/?point=-24.094456588117055%2C-48.364450335502625&point=" + Lat + "%2C" + Lon + "&locale=pt-BR&vehicle=car&weighting=fastest&elevation=true&use_miles=false&layer=OpenStreetMap";
+	var Link = "https://graphhopper.com/maps/?point=recife&point=" + Lat + "%2C" + Lon + "&locale=pt-BR&vehicle=car&weighting=fastest&elevation=true&use_miles=false&layer=OpenStreetMap";
 	return Link;
 }
 function GetLinkMapillary(Lat,Lon,Zoom) {
@@ -219,7 +219,6 @@ function mrgAddDataOverlay(Pasta,Arquivo,Apelido,IconDefault,IconMini,Enquadrar,
 			 if(IsMarker){ 
 				var URLchegar = HrefFromURLPlus(
 								GetLinkGraphhopper(LatLon.lat,LatLon.lng), "",mrgTxtGraphhpr,"<br><span class='fas fa-directions'></span> como chegar","_blank"
-								//mrgURLBoletimCOVID, "","FIQUE EM CASA","<br><span class='fas fa-heart'></span> fique em casa.","_parent"
 								);
 			 };
 
