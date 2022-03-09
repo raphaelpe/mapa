@@ -46,28 +46,22 @@ function mrgMedicaoEstaAtiva() {
 
 //------------------------------------
 function GetLinkGraphhopper(Lat,Lon) {
-  var Link = `https://graphhopper.com/maps/?point=${gps ? gps : 'recife'}&point=${Lat}%2C${Lon}&locale=pt-BR&vehicle=car&weighting=fastest&elevation=true&use_miles=false&layer=OpenStreetMap`
-  return Link
+  return `https://graphhopper.com/maps/?point=${gps ? gps : 'recife'}&point=${Lat}%2C${Lon}&locale=pt-BR&vehicle=car&weighting=fastest&elevation=true&use_miles=false&layer=OpenStreetMap`
 }
 function GetLinkMapillary(Lat,Lon,Zoom) {
-  var Link = "http://www.mapillary.com/map/search/" + Lat + "/" + Lon + "/" + Zoom
-  return Link
+  return `http://www.mapillary.com/app/?lat=${Lat}&lng=${Lon}&z=${Zoom}`
 }
 function GetLinkF4Map(Lat,Lon,Zoom) {
-  var Link = "http://demo.f4map.com/#lat=" + Lat + "&lon=" + Lon + "&zoom="+ Zoom + "&camera.theta=58.465"
-  return Link
+  return "http://demo.f4map.com/#lat=" + Lat + "&lon=" + Lon + "&zoom="+ Zoom + "&camera.theta=58.465"
 }
 function GetLinkOSMe(Lat,Lon) {
-  var Link = "http://www.openstreetmap.org/edit#map=18/" + Lat + "/" + Lon
-  return Link
+  return "http://www.openstreetmap.org/edit#map=18/" + Lat + "/" + Lon
 }
 function GetLinkOSMd(Lat,Lon,Zoom) {
-  var Link = "https://www.openstreetmap.org/query?lat="+Lat+"&lon="+Lon+"#map="+Zoom+"/"+Lat+"/"+Lon
-  return Link
+  return "https://www.openstreetmap.org/query?lat="+Lat+"&lon="+Lon+"#map="+Zoom+"/"+Lat+"/"+Lon
 }
 function GetLinkNote(Lat,Lon) {
-  var Link = "http://www.openstreetmap.org/note/new#map=14/" + Lat + "/" + Lon
-  return Link
+  return "http://www.openstreetmap.org/note/new#map=14/" + Lat + "/" + Lon
 }
 
 function LinkDoMapa(Lat,Lon,Zoom,Dir,Param) {
