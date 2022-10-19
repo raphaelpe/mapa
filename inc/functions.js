@@ -63,8 +63,8 @@ function GetLinkOSMd(Lat,Lon,Zoom) {
 function GetLinkNote(Lat,Lon) {
   return "http://www.openstreetmap.org/note/new#map=14/" + Lat + "/" + Lon
 }
-function GetLinkNote(Lat,Lon) {
-  return "http://www.openstreetmap.org/note/new#map=14/" + Lat + "/" + Lon
+function GetLinkNote(Lat,Lon,Zoom) {
+  return "https://www.openstreetbrowser.org/#?lat=${Lat}&lng=${Lon}&z=${Zoom}`
 }
 
 function LinkDoMapa(Lat,Lon,Zoom,Dir,Param) {
