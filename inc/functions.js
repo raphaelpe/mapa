@@ -63,6 +63,9 @@ function GetLinkOSMd(Lat,Lon,Zoom) {
 function GetLinkNote(Lat,Lon) {
   return "http://www.openstreetmap.org/note/new#map=14/" + Lat + "/" + Lon
 }
+function GetLinkNote(Lat,Lon) {
+  return "http://www.openstreetmap.org/note/new#map=14/" + Lat + "/" + Lon
+}
 
 function LinkDoMapa(Lat,Lon,Zoom,Dir,Param) {
    var Adicional = ""
@@ -113,6 +116,7 @@ function GerarOpcoesDoMapa(Lat,Lon,Zoom,Dir) {
     + CriarBotao(LinkF4Map)
     + CriarBotao(LinkOSMe)
     + CriarBotao(LinkOSMd)
+    + CriarBotao(LinkNote)
     + CriarBotao(LinkNote)
     + "<div class='mrg-floatstop'></div>"
     + "</div><div class='mrg-floatstop'></div>"
