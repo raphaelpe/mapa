@@ -32,7 +32,7 @@ var mrgActiveLayer = mrgLayerMapnik; //Layer atual inicial
 var mrgSideBySideControlFg = mrgLayerMapnik; //Layer inicial
 var mrgSideBySideControlBk = mrgLayerMapBoxSat; //Layer inicial
 var mrgSideBySideActive = false;
-var mrgURLBaseMapasGEOJSON = 'https://raphaelpe.github.io/mapa/';
+var mrgURLBaseMapasGEOJSON = 'https://raphaelpe.github.io/mapa';
 var mrgBaseDir = GetCurrentDir();
 
 //Marcador que aparece ao clicar no mapa
